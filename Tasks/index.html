@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Layout Masterclass</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Padding, Margin, and Flexbox Masterclass</h1>
+        <p>A guided journey from Basic to Advanced Layouts.</p>
+    </header>
+
+    <section>
+        <div class="section-header">
+            <h2>SECTION A: Foundations - What Space Really Means</h2>
+        </div>
+
+        <article class="task">
+            <h3>Task 1: Content vs Padding</h3>
+            <div class="experiment">
+                <div class="box task1">I have Padding</div>
+            </div>
+            <div class="analysis">
+                <h4>Analysis & Answers:</h4>
+                <ul>
+                    <li><strong>Does padding increase the element’s visible size?</strong> <br>
+                    Yes. By default (content-box), adding 20px padding adds 40px to the total width/height.</li>
+                    <li><strong>Does padding affect nearby elements?</strong> <br>
+                    Yes. Because the element grows physically larger, it pushes nearby elements away.</li>
+                </ul>
+            </div>
+        </article>
+
+        <article class="task">
+            <h3>Task 2: Content vs Margin</h3>
+            <div class="experiment">
+                <div class="box task2">I have Margin</div>
+            </div>
+            <div class="analysis">
+                <h4>Analysis & Answers:</h4>
+                <ul>
+                    <li><strong>Does margin increase the element size?</strong> <br>
+                    No. The element's border and background remain the same size. Margin is external space.</li>
+                    <li><strong>Does margin belong to the element itself?</strong> <br>
+                    No. It belongs to the layout. It creates "personal space" between this element and others.</li>
+                </ul>
+            </div>
+        </article>
+
+        <article class="task">
+            <h3>Task 3: Padding & Background Relationship</h3>
+            <div class="experiment">
+                <div class="box task3-padding">Padding (Colored)</div>
+                <div class="box task3-margin">Margin (Transparent)</div>
+            </div>
+            <div class="analysis">
+                <h4>Analysis & Answers:</h4>
+                <ul>
+                    <li><strong>Which space is colored?</strong> The Padding area.</li>
+                    <li><strong>Why is margin not visible?</strong> Margin is always transparent; it is merely empty distance.</li>
+                    <li><strong>What does this tell you about the box model?</strong> The "Box" ends at the border. Everything inside (padding + content) gets the background. Everything outside (margin) is the environment.</li>
+                </ul>
+            </div>
+        </article>
+
+        <article class="task">
+            <h3>Task 4: Side-Specific Spacing</h3>
+            <div class="experiment">
+                <div class="box task4">Complex Spacing</div>
+            </div>
+            <div class="analysis">
+                <h4>Analysis & Answers:</h4>
+                <p><strong>Rewrite using individual properties:</strong></p>
+                <code>padding-top: 10px; padding-right: 50px; padding-bottom: 30px; padding-left: 70px;</code>
+                <p><strong>Shorthand Trade-off:</strong> Shorthand improves readability when spacing is symmetrical (e.g., `margin: 10px`). It reduces clarity when every side is different, making it harder to scan mentally.</p>
+            </div>
+        </article>
+
+        <article class="task">
+            <h3>Task 5: Invalid and Extreme Values</h3>
+            <div class="experiment">
+                <div class="box task5">Negative Margin (-20px)</div>
+            </div>
+            <div class="analysis">
+                <h4>Analysis & Answers:</h4>
+                <ul>
+                    <li><strong>Why padding disallows negative values:</strong> You cannot have "negative space" inside a physical box. The border cannot be smaller than the content it holds.</li>
+                    <li><strong>Use cases for negative margins:</strong> 
+                        1. Overlapping elements (like a badge on a card). 
+                        2. Pulling an image wider than its container ("bleed" layout).
+                    </li>
+                </ul>
+            </div>
+        </article>
+    </section>
+
+    <section>
+        <div class="section-header">
+            <h2>SECTION B: Layout Interaction and Collision</h2>
+        </div>
+
+        <article class="task">
+            <h3>Task 6: Margin Collapse</h3>
+            <div class="experiment">
+                <div class="box task6-a">Bottom Margin: 50px</div>
+                <div class="box task6-b">Top Margin: 30px</div>
+            </div>
+            <div class="analysis">
+                <h4>Analysis & Answers:</h4>
+                <p><strong>Result:</strong> The space between them is 50px, not 80px.</p>
+                <p><strong>Explanation:</strong> When vertical margins touch, they "collapse" into a single space equal to the largest margin. They do not add up.</p>
+            </div>
+        </article>
+
+        <article class="task">
+            <h3>Task 7: Inline vs Block Elements</h3>
+            <div class="experiment">
+                <span class="inline-test">Inline Span</span>
+                <span class="inline-test">Inline Span</span>
+            </div>
+            <div class="analysis">
+                <h4>Analysis & Answers:</h4>
+                <ul>
+                    <li><strong>Which properties behave differently?</strong> Top/Bottom margins and padding do not push other text lines away on `inline` elements.</li>
+                    <li><strong>Why?</strong> Inline elements are meant to flow with text (like <strong>bold</strong> words). If they pushed the layout, they would break the paragraph reading flow.</li>
+                </ul>
+            </div>
+        </article>
+    </section>
+
+    <section>
+        <div class="section-header">
+            <h2>SECTION C: Introduction to Flexbox</h2>
+        </div>
+
+        <article class="task">
+            <h3>Task 8: Why Flex Exists</h3>
+            <div class="experiment">
+                <div class="flex-container task8">
+                    <div class="item">1</div>
+                    <div class="item">2</div>
+                    <div class="item">3</div>
+                </div>
+            </div>
+            <div class="analysis">
+                <h4>Analysis & Answers:</h4>
+                <p><strong>Three immediate changes with `display: flex`:</strong></p>
+                <ol>
+                    <li>Items align in a row (horizontally).</li>
+                    <li>Items shrink to fit their content width.</li>
+                    <li>Items stretch to match the height of the tallest item.</li>
+                </ol>
+            </div>
+        </article>
+
+        <article class="task">
+            <h3>Task 9 & 10: Padding/Margin/Gap in Flex</h3>
+            <div class="experiment">
+                <div class="flex-container task9">
+                    <div class="item">Padding Item</div>
+                    <div class="item">Margin Item</div>
+                </div>
+            </div>
+            <div class="analysis">
+                <h4>Analysis & Answers:</h4>
+                <ul>
+                    <li><strong>Does padding affect alignment?</strong> No, flex aligns the *box*, regardless of how fat the box is due to padding.</li>
+                    <li><strong>Why Gap exists:</strong> `gap` creates space *between* items without adding space to the outside edges. Margins add space everywhere, which often requires messy hacks like `last-child { margin-right: 0 }`.</li>
+                </ul>
+            </div>
+        </article>
+
+        <article class="task">
+            <h3>Task 11: Main Axis vs Cross Axis</h3>
+            <div class="experiment">
+                <div class="flex-container task11">
+                    <div class="item">Col 1</div>
+                    <div class="item">Col 2</div>
+                </div>
+            </div>
+            <div class="analysis">
+                <h4>Analysis & Answers:</h4>
+                <p><strong>Explanation:</strong> In `flex-direction: column`, the Main Axis is vertical. Misunderstanding this causes bugs because `justify-content` (main axis) now controls vertical spacing, not horizontal.</p>
+            </div>
+        </article>
+    </section>
+
+    <section>
+        <div class="section-header">
+            <h2>SECTION D: Control and Alignment</h2>
+        </div>
+
+        <article class="task">
+            <h3>Task 12: justify-content vs margin</h3>
+            <div class="experiment">
+                <div class="flex-container task12">
+                    <div class="item">Start</div>
+                    <div class="item">Center</div>
+                    <div class="item">End</div>
+                </div>
+            </div>
+            <div class="analysis">
+                <h4>Analysis & Answers:</h4>
+                <p><strong>Why container control is better:</strong> Using `justify-content: space-between` on the parent makes the layout responsive. If you used fixed margins on children, the layout would break on smaller screens.</p>
+            </div>
+        </article>
+
+        <article class="task">
+            <h3>Task 13: align-items and Padding</h3>
+            <div class="experiment">
+                <div class="flex-container task13">
+                    <div class="item small-pad">Small Pad</div>
+                    <div class="item big-pad">Big Pad</div>
+                </div>
+            </div>
+            <div class="analysis">
+                <h4>Analysis & Answers:</h4>
+                <ul>
+                    <li><strong>Does alignment change?</strong> No, `align-items: center` keeps their midpoints aligned perfectly, regardless of their different heights.</li>
+                    <li><strong>Predictability:</strong> This is superior to margins because you don't need to calculate pixel math to center things.</li>
+                </ul>
+            </div>
+        </article>
+
+        <article class="task">
+            <h3>Task 14: Auto Margin in Flex</h3>
+            <div class="experiment">
+                <div class="flex-container navbar">
+                    <div class="item">Logo</div>
+                    <div class="item">Link</div>
+                    <div class="item push-right">Login (Auto Margin)</div>
+                </div>
+            </div>
+            <div class="analysis">
+                <h4>Analysis & Answers:</h4>
+                <ul>
+                    <li><strong>How auto margins work:</strong> In Flexbox, `margin: auto` eats up all available empty space.</li>
+                    <li><strong>Use Case:</strong> Creating navigation bars where the "Login" button is pushed all the way to the right side.</li>
+                </ul>
+            </div>
+        </article>
+    </section>
+
+    <section>
+        <div class="section-header">
+            <h2>SECTION E & F: Design Decisions & Advanced</h2>
+        </div>
+
+        <article class="task">
+            <h3>Task 15 & 16: Button & Card Design</h3>
+            <div class="experiment">
+                <div class="card">
+                    <img src="https://placehold.co/250x120" alt="placeholder">
+                    <div class="card-content">
+                        <h4>Card Title</h4>
+                        <p>Description text goes here.</p>
+                        <button class="btn">Action</button>
+                    </div>
+                </div>
+            </div>
+            <div class="analysis">
+                <h4>Analysis & Answers:</h4>
+                <ul>
+                    <li><strong>Button Padding vs Margin:</strong> Padding increases the clickable area (good for accessibility/fingers). Margin just moves the button.</li>
+                    <li><strong>Card Rules:</strong> Padding is used inside the card to keep text off the edges. Margins separate the elements (title, text, button) from each other.</li>
+                </ul>
+            </div>
+        </article>
+
+        <article class="task">
+            <h3>Task 17: Box Size Illusion</h3>
+            <div class="experiment">
+                <div class="box illusion-pad">High Padding</div>
+                <div class="box illusion-margin">High Margin</div>
+            </div>
+            <div class="analysis">
+                <h4>Analysis & Answers:</h4>
+                <ul>
+                    <li><strong>Which appears larger?</strong> The Padding box appears larger because the background color fills the padding.</li>
+                    <li><strong>Which occupies more space?</strong> They might occupy the same layout space, but visually they are totally different.</li>
+                </ul>
+            </div>
+        </article>
+
+        <article class="task">
+            <h3>Task 18 & 19: The "Fixes"</h3>
+            <div class="experiment">
+                <div class="box task18">
+                    Content Box vs Border Box
+                </div>
+                <div class="flex-container task19">
+                    <div class="item">Vertically Centered</div>
+                </div>
+            </div>
+            <div class="analysis">
+                <h4>Analysis & Answers:</h4>
+                <ul>
+                    <li><strong>Task 18 (Overflow):</strong> Overflow happens because `width: 100% + padding` is wider than the screen. <br><strong>Fix:</strong> `box-sizing: border-box` makes padding subtract from width rather than add to it.</li>
+                    <li><strong>Task 19 (Vertical Center):</strong> Margin `auto` fails vertically in standard block layout because the browser doesn't calculate height automatically. Flexbox solves this with `align-items: center`.</li>
+                </ul>
+            </div>
+        </article>
+        <article class="task">
+            <h3>Task 20: Rule Formation (The Golden Rules)</h3>
+            <div class="analysis">
+                <h4>Analysis & Answers:</h4>
+                <ul>
+                    <li><strong>When should Padding never be used?</strong><br>
+                    Never use padding to create space <em>between</em> two separate elements (that is margin's job). Also, do not use it if you need the background color to stop at the content edge.</li>
+                    
+                    <li><strong>When should Margin never be used?</strong><br>
+                    1. Never use margin to increase the clickable area of a button (padding does that).<br>
+                    2. Never use margin to guess vertical centering (e.g., `margin-top: 50px`). It is unreliable and breaks on mobile.</li>
+                    
+                    <li><strong>When should Flexbox replace both?</strong><br>
+                    Use Flexbox whenever you are trying to align items relative to each other (centering, spacing evenly, sticking to corners). Stop using margin to "push" items into place.</li>
+                    
+                    <li><strong>How does this improve maintainability?</strong><br>
+                    It eliminates "Magic Numbers" (specific pixel values like `127px` that break easily). Flexbox adapts automatically to different screen sizes, making the code cleaner and easier to read.</li>
+                </ul>
+            </div>
+        </article>
+    </section>
+    
+    <footer>
+        <p>End of Lab</p>
+    </footer>
+
+</body>
+</html>

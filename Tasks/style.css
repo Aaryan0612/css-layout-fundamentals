@@ -1,0 +1,226 @@
+/* ================= GENERAL STYLING ================= */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+}
+
+h1, h2, h3 {
+    color: #2c3e50;
+}
+
+section {
+    max-width: 900px;
+    margin: 0 auto 60px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.section-header {
+    border-bottom: 2px solid #3498db;
+    margin-bottom: 20px;
+}
+
+.task {
+    margin-bottom: 40px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 20px;
+}
+
+/* Styles for the "Analysis & Answer" text blocks */
+.analysis {
+    background-color: #e8f6f3;
+    border-left: 5px solid #1abc9c;
+    padding: 15px;
+    margin-top: 20px;
+    font-size: 0.95rem;
+}
+
+.experiment {
+    background-color: #eee;
+    padding: 20px;
+    border: 1px dashed #999;
+    margin-top: 10px;
+}
+
+/* ================= SECTION A: FOUNDATIONS ================= */
+
+/* Common Box Style */
+.box {
+    background-color: lightcoral;
+    border: 2px solid black;
+    display: inline-block; /* Makes them sit nicely for demo */
+}
+
+/* Task 1: Padding increases visible size */
+.task1 {
+    padding: 20px; /* Change this to 40px or 80px to test */
+}
+
+/* Task 2: Margin creates outer space */
+.task2 {
+    margin: 40px;
+}
+
+/* Task 3: Background Relationship */
+.task3-padding {
+    padding: 30px;
+    margin-right: 20px;
+    background-color: lightblue; /* Fills padding */
+}
+.task3-margin {
+    margin: 30px;
+    background-color: lightblue; /* Does NOT fill margin */
+}
+
+/* Task 4: Shorthand */
+.task4 {
+    /* Top | Right | Bottom | Left */
+    padding: 10px 50px 30px 70px; 
+    margin: 20px;
+}
+
+/* Task 5: Extreme Values */
+.task5 {
+    margin-left: -20px; /* Pulls it to the left, overlapping boundary */
+    background-color: orange;
+}
+
+/* ================= SECTION B: INTERACTIONS ================= */
+
+/* Task 6: Margin Collapse */
+.task6-a {
+    display: block;
+    margin-bottom: 50px;
+    background-color: violet;
+}
+.task6-b {
+    display: block;
+    margin-top: 30px; /* This 30px gets "eaten" by the 50px above */
+    background-color: violet;
+}
+
+/* Task 7: Inline Elements */
+.inline-test {
+    background-color: yellow;
+    border: 1px solid black;
+    /* Vertical padding/margin on inline elements does NOT affect layout flow */
+    padding: 20px; 
+    margin: 50px; 
+}
+
+/* ================= SECTION C: FLEXBOX ================= */
+
+/* Common Flex Styles */
+.flex-container {
+    display: flex;
+    background-color: #ddd;
+    border: 2px solid #666;
+    padding: 10px;
+    gap: 10px; /* Modern spacing */
+}
+
+.item {
+    background-color: #3498db;
+    color: white;
+    padding: 20px;
+    font-weight: bold;
+}
+
+/* Task 11: Column Direction */
+.task11 {
+    flex-direction: column;
+}
+
+/* ================= SECTION D: CONTROL ================= */
+
+/* Task 12: Justify Content */
+.task12 {
+    justify-content: space-between; /* Pushes items to edges */
+}
+
+/* Task 13: Alignment & Padding */
+.task13 {
+    align-items: center; /* Centers them vertically even with different heights */
+    height: 150px;
+}
+.small-pad { padding: 10px; }
+.big-pad { padding: 40px; }
+
+/* Task 14: Auto Margin Navigation */
+.navbar {
+    background-color: #333;
+    color: white;
+}
+.navbar .item {
+    background: none;
+    padding: 10px 20px;
+}
+.push-right {
+    margin-left: auto; /* The magic that pushes it to the right */
+    background-color: #e74c3c !important;
+    border-radius: 4px;
+}
+
+/* ================= SECTION E: DESIGN ================= */
+
+/* Task 15 & 16: Card */
+.card {
+    width: 250px;
+    border: 1px solid #ccc;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+}
+.card-content {
+    padding: 15px; /* Internal spacing */
+}
+.card h4 { margin-top: 0; }
+.btn {
+    padding: 10px 20px; /* Large click area */
+    background-color: #27ae60;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px; /* Separation from text */
+}
+
+/* Task 17: Illusion */
+.illusion-pad {
+    box-sizing: content-box; /* Default */
+    width: 100px;
+    padding: 40px; /* Visually adds size */
+}
+.illusion-margin {
+    box-sizing: content-box;
+    width: 100px;
+    margin: 40px; /* Visually keeps box small, adds invisible space */
+}
+
+/* Task 18 & 19: Advanced Fixes */
+.task18 {
+    width: 100%;
+    padding: 50px;
+    /* The Fix: prevents padding from expanding the width beyond 100% */
+    box-sizing: border-box; 
+    background-color: plum;
+}
+
+.task19 {
+    height: 150px;
+    /* The Fix for vertical centering */
+    align-items: center; 
+    justify-content: center;
+    background-color: #333;
+}
+
+/* Task 20: Special highlighting for the Rules */
+.task:last-child .analysis {
+    background-color: #fff8e1; /* Light yellow for "Golden Rules" */
+    border-left-color: #f1c40f;
+}
