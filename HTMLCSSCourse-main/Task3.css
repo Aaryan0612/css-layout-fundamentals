@@ -1,0 +1,33 @@
+body {
+  font-family: Arial, sans-serif;
+  padding: 40px;
+}
+
+h1, h2 {
+  text-align: center;
+}
+
+.container {
+  display: grid;
+  border: 2px solid black;
+  padding: 20px;
+  margin-bottom: 30px;
+  gap: 15px;
+}
+
+.fixed {
+  grid-template-columns: 200px 200px 200px;
+}
+
+.flexible {
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.item {
+  background-color: steelblue;
+  color: white;
+  padding: 20px;
+  border: 1px solid black;
+  font-size: 16px;
+  line-height: 1.5;
+}
