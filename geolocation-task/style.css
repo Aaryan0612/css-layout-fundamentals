@@ -1,0 +1,145 @@
+/* ================== Root Variables ================== */
+:root {
+  --p1: 0% 0%;
+  --p2: 50% 50%;
+  --p3: 100% 100%;
+  --op: 0.85;
+}
+
+/* ================== Base ================== */
+body {
+  margin: 0;
+  height: 100vh;
+  overflow: hidden;
+  font-family: Arial, sans-serif;
+  background: #eef2f3;
+}
+
+/* ================== Animated Circles Background ================== */
+.circles-background {
+  position: fixed;
+  inset: 0;
+  background:
+    radial-gradient(khaki 35px, transparent 36px),
+    radial-gradient(skyblue 35px, transparent 36px),
+    radial-gradient(pink 35px, transparent 36px), snow;
+  background-blend-mode: multiply;
+  background-size: 110px 110px;
+  background-position: var(--p1), var(--p2), var(--p3);
+  opacity: var(--op);
+  transition:
+    background-position 4s ease-in-out,
+    opacity 3s ease-in-out;
+}
+
+/* ================== Soft Glow Overlay ================== */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(
+    circle at center,
+    rgba(0, 180, 255, 0.18),
+    transparent 60%
+  );
+  pointer-events: none;
+}
+
+/* ================== Main Card ================== */
+.card {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(255, 255, 255, 0.95);
+  padding: 35px 50px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+  transition: 0.4s;
+}
+
+.card:hover {
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.45);
+  transform: translate(-50%, -52%);
+}
+
+/* ================== Button ================== */
+button {
+  padding: 14px 35px;
+  font-size: 18px;
+  border: none;
+  border-radius: 25px;
+  background: linear-gradient(135deg, #ff7f50, #ff4500);
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 18px rgba(255, 100, 50, 0.7);
+}
+
+/* ================== Coordinates Display ================== */
+#loc {
+  margin-top: 25px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+
+#loc span {
+  color: #ff4500;
+}
+
+/* ================== Coordinate Animation ================== */
+#loc.animate {
+  animation: slideUp 0.5s ease;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(10px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+/* ================== Decorative Floating Dots ================== */
+.decor-dot {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: rgba(0, 150, 255, 0.6);
+  animation: float 6s ease-in-out infinite;
+  pointer-events: none;
+}
+
+.decor-dot.one {
+  top: 20%;
+  left: 30%;
+}
+
+.decor-dot.two {
+  bottom: 25%;
+  right: 35%;
+  animation-delay: 2s;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+    opacity: 0.6;
+  }
+  50% {
+    transform: translateY(-20px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 0.6;
+  }
+}
