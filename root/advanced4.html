@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Advanced Task 4 - Layout Spacing</title>
+
+  <style>
+    :root {
+      --section-padding: 20px;
+      --section-margin: 20px;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    section {
+      padding: var(--section-padding);
+      margin: var(--section-margin);
+      background-color: #f2f2f2;
+      border: 1px solid #ccc;
+    }
+  </style>
+</head>
+<body>
+
+  <section>
+    <h2>Section One</h2>
+    <p>Spacing is controlled using :root variables.</p>
+  </section>
+
+  <section>
+    <h2>Section Two</h2>
+    <p>Change spacing once, layout updates everywhere.</p>
+  </section>
+
+</body>
+</html>
