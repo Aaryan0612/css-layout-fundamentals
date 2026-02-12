@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flex-box task</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      .header {
+        display: flex;
+        align-items: center;
+        padding: 15px 40px;
+        background-color: #0d1b2a;
+        color: white;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+      }
+      .logo {
+        font-size: 22px;
+        font-weight: bold;
+      }
+
+      .nav {
+        display: flex;
+        gap: 25px;
+        margin-left: auto;
+      }
+
+      .nav a:hover {
+        color: #4cc9f0;
+      }
+
+      .cta {
+        margin-left: 25px;
+        padding: 8px 10px;
+        border: none;
+        background-color: #4cc9f0;
+        color: black;
+        font-weight: bold;
+        cursor: pointer;
+        transition: 0.3 ease;
+      }
+
+      .cta:hover {
+        background-color: #3aa8d8;
+      }
+
+      @media (max-width: 768px) {
+        .header {
+          flex-direction: column;
+          align-items: stretch;
+          gap: 15px;
+        }
+
+        .nav {
+          margin-left: 0;
+          justify-content: center;
+        }
+
+        .cta {
+          margin-left: 0;
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <div class="Logo">
+        <img src="./apple.png" alt="apple logo" />
+      </div>
+      <nav class="nav">
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Contact</a>
+      </nav>
+
+      <button class="cta">Get started</button>
+    </header>
+  </body>
+</html>
