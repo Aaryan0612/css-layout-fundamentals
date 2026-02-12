@@ -1,0 +1,172 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background: #f4f5f7;
+}
+
+/* ========== TOP NAVBAR ========== */
+.topbar {
+  display: flex;
+  align-items: center;
+  padding: 12px 20px;
+  background: #1f2937;
+  color: white;
+}
+
+.brand {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.search {
+  flex: 1;
+  margin: 0 20px;
+}
+
+.search input {
+  width: 100%;
+  padding: 8px 12px;
+  border-radius: 5px;
+  border: none;
+}
+
+.admin {
+  font-weight: 500;
+}
+
+/* ========== LAYOUT ========== */
+.container {
+  display: flex;
+  min-height: calc(100vh - 50px);
+}
+
+/* Sidebar */
+.sidebar {
+  width: 220px;
+  background: linear-gradient(to bottom, #0f172a, #111827);
+  color: white;
+  padding: 20px 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.sidebar a {
+  text-decoration: none;
+  color: #d1d5db;
+  transition: 0.3s ease;
+}
+
+.sidebar a:hover {
+  color: white;
+  transform: translateX(5px);
+}
+
+/* Main Content */
+.main {
+  flex: 1;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+/* Cards Row */
+.card-row {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.card {
+  flex: 1;
+  min-width: 220px;
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  text-align: center;
+}
+
+.card h3 {
+  margin-bottom: 10px;
+  color: #374151;
+}
+
+.card p {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* Blue Panels */
+.panel-row {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.panel {
+  flex: 1;
+  min-width: 300px;
+  background: #2563eb;
+  color: white;
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+/* ========== FOOTER ========== */
+.footer {
+  background: #1f2937;
+  color: #d1d5db;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.footer-left {
+  font-weight: 500;
+}
+
+.footer-right {
+  display: flex;
+  gap: 20px;
+}
+
+.footer-right a {
+  text-decoration: none;
+  color: #d1d5db;
+  transition: 0.3s ease;
+}
+
+.footer-right a:hover {
+  color: white;
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 900px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-around;
+  }
+
+  .footer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
