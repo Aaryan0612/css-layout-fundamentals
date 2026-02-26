@@ -1,0 +1,1027 @@
+<!doctype html>
+<html lang="en" class="h-100">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Daily Grind - Campus Cafe</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="d-flex flex-column h-100">
+    <!-- Offcanvas Sidebar Navigation -->
+    <div
+      class="offcanvas offcanvas-start"
+      tabindex="-1"
+      id="sidebar"
+      aria-labelledby="sidebarLabel"
+    >
+      <div class="offcanvas-header bg-dark text-white">
+        <h5 class="offcanvas-title" id="sidebarLabel">
+          <i class="bi bi-cup-hot-fill me-2"></i>The Daily Grind
+        </h5>
+        <button
+          type="button"
+          class="btn-close btn-close-white"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="nav flex-column gap-2">
+          <li class="nav-item">
+            <a
+              class="nav-link text-dark"
+              href="#home"
+              data-bs-dismiss="offcanvas"
+              ><i class="bi bi-house me-2"></i>Home</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link text-dark"
+              href="#menu"
+              data-bs-dismiss="offcanvas"
+              ><i class="bi bi-book me-2"></i>Menu</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link text-dark"
+              href="#gallery"
+              data-bs-dismiss="offcanvas"
+              ><i class="bi bi-images me-2"></i>Gallery</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link text-dark"
+              href="#pricing"
+              data-bs-dismiss="offcanvas"
+              ><i class="bi bi-tag me-2"></i>Plans</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link text-dark"
+              href="#contact"
+              data-bs-dismiss="offcanvas"
+              ><i class="bi bi-envelope me-2"></i>Contact</a
+            >
+          </li>
+        </ul>
+        <hr />
+        <p class="text-muted small">Open Mon-Sat, 7AM - 10PM</p>
+      </div>
+    </div>
+
+    <!-- Navbar with Dropdowns and Search -->
+    <nav
+      class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow-sm"
+    >
+      <div class="container">
+        <button
+          class="btn btn-outline-light border-0 d-lg-none me-2"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#sidebar"
+        >
+          <i class="bi bi-list fs-4"></i>
+        </button>
+        <a class="navbar-brand fw-bold" href="#">
+          <i class="bi bi-cup-hot-fill me-1"></i> The Daily Grind
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarContent"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" href="#home">Home</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+              >
+                Menu
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#menu">Hot Beverages</a></li>
+                <li><a class="dropdown-item" href="#menu">Cold Brews</a></li>
+                <li>
+                  <a class="dropdown-item" href="#menu">Snacks & Bites</a>
+                </li>
+                <li><hr class="dropdown-divider" /></li>
+                <li>
+                  <a class="dropdown-item" href="#pricing"
+                    >Subscription Plans</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+              >
+                More
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#gallery">Gallery</a></li>
+                <li><a class="dropdown-item" href="#contact">Contact Us</a></li>
+              </ul>
+            </li>
+          </ul>
+          <form class="d-flex" role="search" onsubmit="event.preventDefault()">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Search our menu..."
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-light" type="submit">Search</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+
+    <main class="flex-shrink-0">
+      <!-- Hero Carousel with 4 slides -->
+      <section id="home">
+        <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-indicators">
+            <button
+              type="button"
+              data-bs-target="#heroCarousel"
+              data-bs-slide-to="0"
+              class="active"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#heroCarousel"
+              data-bs-slide-to="1"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#heroCarousel"
+              data-bs-slide-to="2"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#heroCarousel"
+              data-bs-slide-to="3"
+            ></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img
+                src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=1400&h=500&fit=crop"
+                class="d-block w-100 carousel-img"
+                alt="Coffee Shop Interior"
+              />
+              <div class="carousel-caption">
+                <h2 class="fw-bold">Welcome to The Daily Grind</h2>
+                <p>
+                  Your favourite campus cafe — brewing happiness since 2019.
+                </p>
+                <a href="#menu" class="btn btn-warning btn-lg mt-2"
+                  >View Our Menu</a
+                >
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img
+                src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=1400&h=500&fit=crop"
+                class="d-block w-100 carousel-img"
+                alt="Latte Art"
+              />
+              <div class="carousel-caption">
+                <h2 class="fw-bold">Handcrafted Coffee</h2>
+                <p>Every cup is made with care using freshly roasted beans.</p>
+                <button
+                  class="btn btn-light btn-lg mt-2"
+                  data-bs-toggle="modal"
+                  data-bs-target="#specialsModal"
+                >
+                  Today's Specials
+                </button>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img
+                src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=1400&h=500&fit=crop"
+                class="d-block w-100 carousel-img"
+                alt="Cozy Cafe Vibes"
+              />
+              <div class="carousel-caption">
+                <h2 class="fw-bold">A Place to Relax & Study</h2>
+                <p>Free Wi-Fi, comfy seating, and the best playlist in town.</p>
+                <a href="#contact" class="btn btn-success btn-lg mt-2"
+                  >Reserve a Table</a
+                >
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img
+                src="https://images.unsplash.com/photo-1511920170033-f8396924c348?w=1400&h=500&fit=crop"
+                class="d-block w-100 carousel-img"
+                alt="Fresh Pastries"
+              />
+              <div class="carousel-caption">
+                <h2 class="fw-bold">Freshly Baked Every Morning</h2>
+                <p>Croissants, muffins, cookies — all baked in-house daily.</p>
+              </div>
+            </div>
+          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#heroCarousel"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#heroCarousel"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </section>
+
+      <!-- Alerts for different message types -->
+      <section class="container mt-5">
+        <h3 class="mb-4 text-center fw-bold">
+          <i class="bi bi-megaphone me-2"></i>Announcements
+        </h3>
+
+        <div
+          class="alert alert-success alert-dismissible fade show"
+          role="alert"
+        >
+          <i class="bi bi-check-circle-fill me-2"></i>
+          <strong>Grand Opening Offer!</strong> Get 20% off on all drinks this
+          week. Use code <strong>GRIND20</strong> at checkout.
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="alert"
+          ></button>
+        </div>
+
+        <div
+          class="alert alert-warning alert-dismissible fade show"
+          role="alert"
+        >
+          <i class="bi bi-exclamation-triangle-fill me-2"></i>
+          <strong>Heads up!</strong> Our Koramangala branch will be closed for
+          maintenance this Saturday.
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="alert"
+          ></button>
+        </div>
+
+        <div class="alert alert-info" role="alert">
+          <i class="bi bi-info-circle-fill me-2"></i>
+          <strong>New Item!</strong> Try our new Hazelnut Cold Brew — available
+          from next Monday.
+        </div>
+
+        <div class="alert alert-danger" role="alert">
+          <i class="bi bi-exclamation-octagon-fill me-2"></i>
+          <strong>Important:</strong> We do NOT deliver outside the campus area
+          after 8 PM due to safety reasons.
+        </div>
+      </section>
+
+      <!-- Buttons, Badges, Tooltips, Popovers -->
+      <section id="menu" class="container my-5 py-4">
+        <h3 class="text-center fw-bold mb-2">Our Popular Picks</h3>
+        <p class="text-center text-muted mb-4">
+          Hover over items to know more, or click for details!
+        </p>
+
+        <!-- Buttons with various colors and sizes -->
+        <div class="text-center mb-4">
+          <button
+            class="btn btn-primary m-1"
+            data-bs-toggle="tooltip"
+            title="Our most-ordered drink!"
+          >
+            Cappuccino
+          </button>
+          <button
+            class="btn btn-success m-1"
+            data-bs-toggle="tooltip"
+            title="Made with organic matcha"
+          >
+            Matcha Latte
+          </button>
+          <button
+            class="btn btn-danger btn-lg m-1"
+            data-bs-toggle="tooltip"
+            title="Spicy and bold, not for the faint-hearted"
+          >
+            Red Velvet Mocha
+          </button>
+          <button
+            class="btn btn-warning text-dark btn-sm m-1"
+            data-bs-toggle="tooltip"
+            title="Classic and simple"
+          >
+            Espresso Shot
+          </button>
+          <button
+            class="btn btn-info text-white m-1"
+            data-bs-toggle="tooltip"
+            title="Perfect for hot days"
+          >
+            Iced Americano
+          </button>
+          <button
+            class="btn btn-outline-dark m-1"
+            data-bs-toggle="tooltip"
+            title="Freshly squeezed every morning"
+          >
+            Orange Juice
+          </button>
+        </div>
+
+        <!-- Badges with various colors -->
+        <div class="text-center mb-4">
+          <span class="badge bg-primary me-1">Coffee</span>
+          <span class="badge bg-secondary me-1">Tea</span>
+          <span class="badge bg-success me-1">Healthy</span>
+          <span class="badge bg-danger me-1">Spicy</span>
+          <span class="badge bg-warning text-dark me-1">New</span>
+          <span class="badge bg-info text-dark me-1">Seasonal</span>
+          <span class="badge rounded-pill bg-dark"
+            >Bestseller <i class="bi bi-star-fill ms-1"></i
+          ></span>
+        </div>
+
+        <!-- Popovers -->
+        <div class="text-center">
+          <button
+            class="btn btn-outline-primary m-1"
+            data-bs-toggle="popover"
+            data-bs-trigger="focus"
+            title="Cappuccino"
+            data-bs-content="A rich espresso topped with steamed milk foam. ₹180 for regular, ₹220 for large."
+          >
+            <i class="bi bi-info-circle me-1"></i>Cappuccino Details
+          </button>
+          <button
+            class="btn btn-outline-success m-1"
+            data-bs-toggle="popover"
+            data-bs-trigger="focus"
+            title="Matcha Latte"
+            data-bs-content="Premium Japanese matcha whisked with oat milk. A healthy and delicious choice! ₹250."
+          >
+            <i class="bi bi-info-circle me-1"></i>Matcha Info
+          </button>
+          <button
+            class="btn btn-dark m-1"
+            data-bs-toggle="modal"
+            data-bs-target="#specialsModal"
+          >
+            <i class="bi bi-stars me-1"></i>View Today's Specials
+          </button>
+        </div>
+      </section>
+
+      <!-- Responsive Grid Gallery -->
+      <section id="gallery" class="bg-light py-5">
+        <div class="container">
+          <h3 class="text-center fw-bold mb-2">Our Cafe Gallery</h3>
+          <p class="text-center text-muted mb-4">
+            Some snapshots from around the cafe
+          </p>
+
+          <div class="row g-3">
+            <div class="col-6 col-md-4">
+              <img
+                src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=400&h=300&fit=crop"
+                class="img-fluid rounded shadow-sm gallery-photo"
+                alt="Coffee beans"
+              />
+            </div>
+            <div class="col-6 col-md-4">
+              <img
+                src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?w=400&h=300&fit=crop"
+                class="img-fluid rounded shadow-sm gallery-photo"
+                alt="Pouring coffee"
+              />
+            </div>
+            <div class="col-6 col-md-4">
+              <img
+                src="https://images.unsplash.com/photo-1559496417-e7f25cb247f3?w=400&h=300&fit=crop"
+                class="img-fluid rounded shadow-sm gallery-photo"
+                alt="Cafe interior"
+              />
+            </div>
+            <div class="col-6 col-md-3">
+              <img
+                src="https://images.unsplash.com/photo-1486427944544-d2c246c4df4a?w=400&h=300&fit=crop"
+                class="img-fluid rounded shadow-sm gallery-photo"
+                alt="Pastries display"
+              />
+            </div>
+            <div class="col-12 col-md-6">
+              <img
+                src="https://images.unsplash.com/photo-1521017432531-fbd92d768814?w=800&h=300&fit=crop"
+                class="img-fluid rounded shadow-sm gallery-photo w-100"
+                alt="People at cafe"
+              />
+            </div>
+            <div class="col-6 col-md-3">
+              <img
+                src="https://images.unsplash.com/photo-1485808191679-5f86510681a2?w=400&h=300&fit=crop"
+                class="img-fluid rounded shadow-sm gallery-photo"
+                alt="Iced coffee"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Pricing Cards using Grid -->
+      <section id="pricing" class="container py-5">
+        <h3 class="text-center fw-bold mb-2">Monthly Coffee Plans</h3>
+        <p class="text-center text-muted mb-5">
+          Save money if you're a regular! Pick a subscription that works for
+          you.
+        </p>
+
+        <div class="row row-cols-1 row-cols-md-3 g-4 text-center">
+          <div class="col">
+            <div class="card h-100 shadow-sm border-0">
+              <div class="card-header bg-white py-3">
+                <h4 class="fw-bold my-0">Starter</h4>
+              </div>
+              <div class="card-body d-flex flex-column">
+                <h1 class="card-title">
+                  ₹499<small class="text-muted fw-normal">/mo</small>
+                </h1>
+                <ul class="list-unstyled mt-3 mb-4 text-start mx-auto">
+                  <li class="mb-2">
+                    <i class="bi bi-check2 text-success me-2"></i>5 drinks per
+                    month
+                  </li>
+                  <li class="mb-2">
+                    <i class="bi bi-check2 text-success me-2"></i>Basic size
+                    only
+                  </li>
+                  <li class="mb-2 text-muted">
+                    <i class="bi bi-x me-2"></i>No food included
+                  </li>
+                  <li class="mb-2 text-muted">
+                    <i class="bi bi-x me-2"></i>No priority seating
+                  </li>
+                </ul>
+                <button class="btn btn-outline-primary mt-auto w-100">
+                  Choose Starter
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card h-100 shadow border-primary border-2">
+              <div class="card-header bg-primary text-white py-3">
+                <h4 class="fw-bold my-0">
+                  Popular
+                  <span class="badge bg-warning text-dark ms-2"
+                    >Best Value</span
+                  >
+                </h4>
+              </div>
+              <div class="card-body d-flex flex-column">
+                <h1 class="card-title">
+                  ₹999<small class="text-muted fw-normal">/mo</small>
+                </h1>
+                <ul class="list-unstyled mt-3 mb-4 text-start mx-auto">
+                  <li class="mb-2">
+                    <i class="bi bi-check2-circle text-success me-2"></i>15
+                    drinks per month
+                  </li>
+                  <li class="mb-2">
+                    <i class="bi bi-check2-circle text-success me-2"></i>Any
+                    size
+                  </li>
+                  <li class="mb-2">
+                    <i class="bi bi-check2-circle text-success me-2"></i>2 free
+                    pastries/week
+                  </li>
+                  <li class="mb-2 text-muted">
+                    <i class="bi bi-x me-2"></i>No priority seating
+                  </li>
+                </ul>
+                <button class="btn btn-primary mt-auto w-100">
+                  Choose Popular
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card h-100 shadow-sm border-0">
+              <div class="card-header bg-dark text-white py-3">
+                <h4 class="fw-bold my-0">Unlimited</h4>
+              </div>
+              <div class="card-body d-flex flex-column">
+                <h1 class="card-title">
+                  ₹1,799<small class="text-muted fw-normal">/mo</small>
+                </h1>
+                <ul class="list-unstyled mt-3 mb-4 text-start mx-auto">
+                  <li class="mb-2">
+                    <i class="bi bi-check2-circle text-success me-2"></i
+                    >Unlimited drinks
+                  </li>
+                  <li class="mb-2">
+                    <i class="bi bi-check2-circle text-success me-2"></i>Any
+                    size, any type
+                  </li>
+                  <li class="mb-2">
+                    <i class="bi bi-check2-circle text-success me-2"></i>Free
+                    pastries daily
+                  </li>
+                  <li class="mb-2">
+                    <i class="bi bi-check2-circle text-success me-2"></i
+                    >Priority seating
+                  </li>
+                </ul>
+                <button class="btn btn-dark mt-auto w-100">
+                  Choose Unlimited
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Compare Plans Table -->
+        <h3 class="text-center mt-5 mb-4">Compare Plans</h3>
+        <div class="table-responsive">
+          <table class="table table-dark text-center align-middle">
+            <thead>
+              <tr>
+                <th class="text-start" style="width: 40%"></th>
+                <th>Starter</th>
+                <th>Popular</th>
+                <th>Unlimited</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="text-start fw-bold">Dine-in Access</td>
+                <td><i class="bi bi-check-lg text-success"></i></td>
+                <td><i class="bi bi-check-lg text-success"></i></td>
+                <td><i class="bi bi-check-lg text-success"></i></td>
+              </tr>
+              <tr>
+                <td class="text-start fw-bold">Takeaway</td>
+                <td></td>
+                <td><i class="bi bi-check-lg text-success"></i></td>
+                <td><i class="bi bi-check-lg text-success"></i></td>
+              </tr>
+              <tr>
+                <td class="text-start fw-bold">Size Upgrade</td>
+                <td><i class="bi bi-check-lg text-success"></i></td>
+                <td><i class="bi bi-check-lg text-success"></i></td>
+                <td><i class="bi bi-check-lg text-success"></i></td>
+              </tr>
+              <tr>
+                <td class="text-start fw-bold">Free Pastries</td>
+                <td></td>
+                <td><i class="bi bi-check-lg text-success"></i></td>
+                <td><i class="bi bi-check-lg text-success"></i></td>
+              </tr>
+              <tr>
+                <td class="text-start fw-bold">Priority Seating</td>
+                <td></td>
+                <td></td>
+                <td><i class="bi bi-check-lg text-success"></i></td>
+              </tr>
+              <tr>
+                <td class="text-start fw-bold">Event Invites</td>
+                <td></td>
+                <td></td>
+                <td><i class="bi bi-check-lg text-success"></i></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Contact Form with Validation -->
+      <section id="contact" class="bg-dark text-white py-5">
+        <div class="container">
+          <div class="row g-5 align-items-start">
+            <div class="col-lg-5">
+              <h3 class="fw-bold mb-3">
+                <i class="bi bi-envelope-heart me-2"></i>Get in Touch
+              </h3>
+              <p class="text-light mb-4">
+                Have a question, want to book a table, or just say hi? Fill out
+                the form and we'll get back to you!
+              </p>
+              <ul class="list-unstyled text-light">
+                <li class="mb-3">
+                  <i class="bi bi-geo-alt-fill text-warning me-2"></i>Building
+                  4, ITM Campus, Kharghar
+                </li>
+                <li class="mb-3">
+                  <i class="bi bi-telephone-fill text-warning me-2"></i>+91
+                  98765 43210
+                </li>
+                <li class="mb-3">
+                  <i class="bi bi-envelope-fill text-warning me-2"></i
+                  >hello@thedailygrind.cafe
+                </li>
+                <li>
+                  <i class="bi bi-clock-fill text-warning me-2"></i>Mon - Sat,
+                  7:00 AM - 10:00 PM
+                </li>
+              </ul>
+            </div>
+
+            <div class="col-lg-7">
+              <div class="card border-0 shadow rounded-3">
+                <div class="card-body p-4 p-md-5">
+                  <h4 class="fw-bold mb-4 text-dark">
+                    Reservation / Feedback Form
+                  </h4>
+                  <form class="needs-validation" novalidate id="contactForm">
+                    <div class="row g-3">
+                      <div class="col-sm-6">
+                        <label for="fname" class="form-label">First Name</label>
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="fname"
+                          placeholder="Aaryan"
+                          required
+                        />
+                        <div class="invalid-feedback">
+                          Please enter your first name.
+                        </div>
+                      </div>
+                      <div class="col-sm-6">
+                        <label for="lname" class="form-label">Last Name</label>
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="lname"
+                          placeholder="K."
+                          required
+                        />
+                        <div class="invalid-feedback">
+                          Please enter your last name.
+                        </div>
+                      </div>
+                      <div class="col-12">
+                        <label for="emailInput" class="form-label">Email</label>
+                        <input
+                          type="email"
+                          class="form-control"
+                          id="emailInput"
+                          placeholder="you@example.com"
+                          required
+                        />
+                        <div class="invalid-feedback">
+                          Please enter a valid email.
+                        </div>
+                      </div>
+                      <div class="col-12">
+                        <label for="phone" class="form-label"
+                          >Phone (optional)</label
+                        >
+                        <input
+                          type="tel"
+                          class="form-control"
+                          id="phone"
+                          placeholder="+91 ..."
+                        />
+                      </div>
+
+                      <!-- Radio buttons -->
+                      <div class="col-12">
+                        <label class="form-label fw-semibold"
+                          >Purpose of Visit</label
+                        >
+                        <div class="d-flex flex-wrap gap-3">
+                          <div class="form-check">
+                            <input
+                              class="form-check-input"
+                              type="radio"
+                              name="purpose"
+                              id="purposeCasual"
+                              value="casual"
+                              checked
+                              required
+                            />
+                            <label class="form-check-label" for="purposeCasual"
+                              >Casual Visit</label
+                            >
+                          </div>
+                          <div class="form-check">
+                            <input
+                              class="form-check-input"
+                              type="radio"
+                              name="purpose"
+                              id="purposeReserve"
+                              value="reservation"
+                            />
+                            <label class="form-check-label" for="purposeReserve"
+                              >Table Reservation</label
+                            >
+                          </div>
+                          <div class="form-check">
+                            <input
+                              class="form-check-input"
+                              type="radio"
+                              name="purpose"
+                              id="purposeFeedback"
+                              value="feedback"
+                            />
+                            <label
+                              class="form-check-label"
+                              for="purposeFeedback"
+                              >Feedback</label
+                            >
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- Checkboxes -->
+                      <div class="col-12">
+                        <label class="form-label fw-semibold"
+                          >Interested in (select all that apply)</label
+                        >
+                        <div class="form-check">
+                          <input
+                            class="form-check-input"
+                            type="checkbox"
+                            id="chkCoffee"
+                          />
+                          <label class="form-check-label" for="chkCoffee"
+                            >Coffee Subscriptions</label
+                          >
+                        </div>
+                        <div class="form-check">
+                          <input
+                            class="form-check-input"
+                            type="checkbox"
+                            id="chkEvents"
+                          />
+                          <label class="form-check-label" for="chkEvents"
+                            >Live Music / Events</label
+                          >
+                        </div>
+                        <div class="form-check">
+                          <input
+                            class="form-check-input"
+                            type="checkbox"
+                            id="chkCatering"
+                          />
+                          <label class="form-check-label" for="chkCatering"
+                            >Catering Services</label
+                          >
+                        </div>
+                      </div>
+
+                      <div class="col-12">
+                        <label for="message" class="form-label"
+                          >Your Message</label
+                        >
+                        <textarea
+                          class="form-control"
+                          id="message"
+                          rows="3"
+                          placeholder="Write something..."
+                          required
+                        ></textarea>
+                        <div class="invalid-feedback">
+                          Please write a short message.
+                        </div>
+                      </div>
+
+                      <div class="col-12">
+                        <div class="form-check">
+                          <input
+                            class="form-check-input"
+                            type="checkbox"
+                            id="agreeTerms"
+                            required
+                          />
+                          <label class="form-check-label" for="agreeTerms">
+                            I agree to the
+                            <a href="#" class="text-primary"
+                              >terms and conditions</a
+                            >
+                          </label>
+                          <div class="invalid-feedback">
+                            You must agree before submitting.
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="col-12 mt-3">
+                        <button
+                          class="btn btn-primary btn-lg w-100"
+                          type="submit"
+                        >
+                          <i class="bi bi-send me-2"></i>Submit
+                        </button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Sticky Footer -->
+    <footer
+      class="footer mt-auto py-4 bg-dark text-white border-top border-secondary"
+    >
+      <div class="container">
+        <div class="row text-center text-md-start gy-3">
+          <div class="col-md-4">
+            <h5 class="fw-bold">
+              <i class="bi bi-cup-hot-fill me-1"></i> The Daily Grind
+            </h5>
+            <p class="text-muted small mb-0">
+              Brewing happiness on campus since 2019.
+            </p>
+          </div>
+          <div class="col-md-4 text-center">
+            <a href="#" class="text-light me-3"
+              ><i class="bi bi-instagram fs-5"></i
+            ></a>
+            <a href="#" class="text-light me-3"
+              ><i class="bi bi-twitter-x fs-5"></i
+            ></a>
+            <a href="#" class="text-light"
+              ><i class="bi bi-facebook fs-5"></i
+            ></a>
+          </div>
+          <div class="col-md-4 text-center text-md-end">
+            <p class="text-muted small mb-0">
+              &copy; 2026 The Daily Grind. All rights reserved.
+            </p>
+            <a href="#" class="text-muted small text-decoration-none"
+              >Privacy Policy</a
+            >
+            &middot;
+            <a href="#" class="text-muted small text-decoration-none">Terms</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Modal for Today's Specials -->
+    <div
+      class="modal fade"
+      id="specialsModal"
+      tabindex="-1"
+      aria-labelledby="specialsModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header bg-warning">
+            <h5 class="modal-title fw-bold" id="specialsModalLabel">
+              <i class="bi bi-stars me-2"></i>Today's Specials
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <ul class="list-group list-group-flush">
+              <li
+                class="list-group-item d-flex justify-content-between align-items-center"
+              >
+                Caramel Macchiato
+                <span class="badge bg-success rounded-pill">₹199</span>
+              </li>
+              <li
+                class="list-group-item d-flex justify-content-between align-items-center"
+              >
+                Blueberry Cheesecake Slice
+                <span class="badge bg-success rounded-pill">₹149</span>
+              </li>
+              <li
+                class="list-group-item d-flex justify-content-between align-items-center"
+              >
+                Chocolate Hazelnut Frappe
+                <span class="badge bg-success rounded-pill">₹249</span>
+              </li>
+              <li
+                class="list-group-item d-flex justify-content-between align-items-center"
+              >
+                Veg Club Sandwich + Coffee Combo
+                <span class="badge bg-danger rounded-pill">₹299</span>
+              </li>
+            </ul>
+            <div class="alert alert-info mt-3 mb-0 small">
+              <i class="bi bi-info-circle me-1"></i> Specials are available only
+              till 6 PM or while stocks last.
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+            <a href="#contact" class="btn btn-primary" data-bs-dismiss="modal"
+              >Reserve Now</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+      // Tooltips init
+      var tooltipTriggerList = [].slice.call(
+        document.querySelectorAll('[data-bs-toggle="tooltip"]'),
+      );
+      tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl);
+      });
+
+      // Popovers init
+      var popoverTriggerList = [].slice.call(
+        document.querySelectorAll('[data-bs-toggle="popover"]'),
+      );
+      popoverTriggerList.map(function (popoverTriggerEl) {
+        return new bootstrap.Popover(popoverTriggerEl);
+      });
+
+      // Form validation (from Bootstrap docs)
+      (function () {
+        "use strict";
+        var forms = document.querySelectorAll(".needs-validation");
+        Array.prototype.slice.call(forms).forEach(function (form) {
+          form.addEventListener(
+            "submit",
+            function (event) {
+              if (!form.checkValidity()) {
+                event.preventDefault();
+                event.stopPropagation();
+              } else {
+                event.preventDefault();
+                alert(
+                  "Form submitted successfully! We will get back to you soon.",
+                );
+                form.reset();
+                form.classList.remove("was-validated");
+                return;
+              }
+              form.classList.add("was-validated");
+            },
+            false,
+          );
+        });
+      })();
+    </script>
+  </body>
+</html>
